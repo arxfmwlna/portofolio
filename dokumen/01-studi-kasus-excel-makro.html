@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studi Kasus: Anatomi Excel Makro dan Padanannya di Sistem Web | Arif Maulana Ade Putra</title>
+  <meta name="author" content="Arif Maulana Ade Putra">
+  <meta name="description" content="Studi kasus teknis: Anatomi berkas Excel makro 57 sheet dan proses penerjemahannya menjadi sistem web pemantauan program yang teruji.">
+  <style>
+    @font-face {
+      font-family: "Plus Jakarta Sans";
+      src: url("../assets/font/plus-jakarta-sans-latin.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Jakarta Sans";
+      src: url("../assets/font/plus-jakarta-sans-latin.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+    }
+
+    :root {
+      --navy-900: #0f2a4a;
+      --navy-700: #1d4e89;
+      --navy-600: #2f6fb5;
+      --navy-100: #eef3f8;
+      --page: #f5f7fa;
+      --surface: #ffffff;
+      --line: #dde5ec;
+      --line-strong: #cfd9e3;
+      --ink: #1f2d3a;
+      --muted: #5c6b7a;
+      --ok: #1e8449;
+      --ok-bg: #eaf6ef;
+      --warn: #b7791f;
+      --warn-bg: #fdf6e7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: "Plus Jakarta Sans", "Jakarta Sans", Arial, sans-serif;
+      font-size: 15.5px;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgb(245 247 250 / 95%);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 24px;
+    }
+
+    .top-bar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .kembali-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--navy-700);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .kembali-link:hover {
+      color: var(--navy-900);
+      text-decoration: underline;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--navy-900);
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 150ms ease;
+    }
+
+    .btn-action:hover {
+      background: var(--navy-100);
+      border-color: var(--navy-600);
+    }
+
+    .btn-primary {
+      background: var(--navy-700);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn-primary:hover {
+      background: var(--navy-900);
+      color: #fff;
+    }
+
+    .doc-container {
+      max-width: 960px;
+      margin: 32px auto 64px;
+      padding: 0 24px;
+    }
+
+    .doc-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    .doc-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+    }
+
+    .doc-kicker {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: var(--navy-900);
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.2;
+      margin: 0 0 16px;
+      letter-spacing: -0.015em;
+    }
+
+    .doc-sub {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 0 0 24px;
+      max-width: 48em;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      background: var(--navy-100);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 13.5px;
+    }
+
+    .meta-item dt {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .meta-item dd {
+      margin: 0;
+      color: var(--navy-900);
+      font-weight: 600;
+    }
+
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin: 32px 0 40px;
+      padding-block: 20px;
+      border-block: 1px solid var(--line);
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-box strong {
+      display: block;
+      color: var(--navy-900);
+      font-size: 26px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: var(--navy-900);
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--navy-100);
+    }
+
+    h3 {
+      color: var(--navy-900);
+      font-size: 17.5px;
+      margin: 28px 0 12px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .callout {
+      background: var(--navy-100);
+      border-left: 4px solid var(--navy-700);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-size: 14.5px;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 4px;
+      font-size: 13.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .callout-warn {
+      background: var(--warn-bg);
+      border-left-color: var(--warn);
+    }
+
+    .callout-warn .callout-title {
+      color: var(--warn);
+    }
+
+    .callout-ok {
+      background: var(--ok-bg);
+      border-left-color: var(--ok);
+    }
+
+    .callout-ok .callout-title {
+      color: var(--ok);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-size: 13.5px;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--navy-900);
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--page);
+    }
+
+    td.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: "Plus Jakarta Sans", "Jakarta Sans", Arial, sans-serif;
+      background: var(--navy-100);
+      color: var(--navy-900);
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 20px 0;
+      padding: 16px;
+      background: var(--page);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .flow-item {
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy-900);
+    }
+
+    .flow-sep {
+      color: var(--navy-600);
+      font-weight: 700;
+    }
+
+    .points-list {
+      margin: 16px 0 24px;
+      padding-left: 20px;
+    }
+
+    .points-list li {
+      margin-bottom: 12px;
+    }
+
+    .doc-footer {
+      border-top: 1px solid var(--line);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .doc-card { padding: 24px 18px; }
+      .stats-strip { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .top-bar { padding: 10px 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-strip { grid-template-columns: repeat(2, 1fr); }
+      table { display: block; overflow-x: auto; }
+      .doc-footer { flex-direction: column; gap: 8px; align-items: flex-start; }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm 14mm;
+      }
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 9.8pt;
+        line-height: 1.45;
+      }
+      .top-bar { display: none !important; }
+      .doc-container { margin: 0; padding: 0; max-width: none; }
+      .doc-card { border: none; padding: 0; }
+      h1 { font-size: 20pt; }
+      h2 { font-size: 13.5pt; margin-top: 18pt; border-bottom: 1.5pt solid var(--navy-700); }
+      h3 { font-size: 11pt; }
+      .stats-strip { margin: 14pt 0; padding: 10pt 0; }
+      .stat-box strong { font-size: 16pt; }
+      table { font-size: 8.5pt; margin: 10pt 0; }
+      th, td { padding: 5pt 7pt; }
+      tr, .callout, .stat-box { break-inside: avoid; }
+      a { text-decoration: none; color: inherit; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a class="kembali-link" href="../index.html">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Kembali ke Portofolio Utama
+      </a>
+      <div class="top-actions">
+        <button class="btn-action" onclick="window.print()" type="button">Cetak / Simpan PDF</button>
+        <a class="btn-action btn-primary" href="01-studi-kasus-excel-makro.pdf" download>Unduh PDF</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-container">
+    <article class="doc-card">
+      <header class="doc-header">
+        <p class="doc-kicker">Studi Kasus Teknis · Cetak Biru Perhitungan</p>
+        <h1>Anatomi Excel Makro dan Padanannya di Sistem Web</h1>
+        <p class="doc-sub">Analisis struktur 57 sheet, 379 ribu baris data, 136 kolom bantu, dan proses translasinya menjadi sistem monitoring berbasis web yang diuji dengan 1.003 uji otomatis.</p>
+        
+        <dl class="meta-grid">
+          <div class="meta-item">
+            <dt>Penyusun</dt>
+            <dd style="display: flex; align-items: center; gap: 8px;">
+              <img src="../assets/img/foto-arif-maulana-square.jpg" alt="Foto Arif Maulana Ade Putra" style="width: 26px; height: 26px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" width="26" height="26">
+              <span>Arif Maulana Ade Putra</span>
+            </dd>
+          </div>
+          <div class="meta-item">
+            <dt>Peran</dt>
+            <dd>Monev & Pengembang Sistem</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Berkas Sumber</dt>
+            <dd><code>Dashboard Capaian YPI.xlsb</code> (73,3 MB)</dd>
+          </div>
+          <div class="meta-item">
+            <dt>Rujukan Kebijakan</dt>
+            <dd>Juknis Penjangkauan & Rujukan PR Spiritia 2024</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="stats-strip">
+        <div class="stat-box">
+          <strong>57</strong>
+          <span>Worksheet</span>
+        </div>
+        <div class="stat-box">
+          <strong>379.503</strong>
+          <span>Baris Data</span>
+        </div>
+        <div class="stat-box">
+          <strong>136</strong>
+          <span>Kolom Bantu</span>
+        </div>
+        <div class="stat-box">
+          <strong>24.578</strong>
+          <span>Rumus Rekap</span>
+        </div>
+        <div class="stat-box">
+          <strong>39</strong>
+          <span>Pivot Table</span>
+        </div>
+        <div class="stat-box">
+          <strong>3</strong>
+          <span>Prosedur VBA</span>
+        </div>
+      </div>
+
+      <section>
+        <h2>1. Mengapa Berkas Ini Penting untuk Cerita Portofolio</h2>
+        <p>Sistem monitoring web yang dibangun bukan merupakan aplikasi yang lahir dari asumsi kosong atau sekadar proyek latihan. Berkas Excel makro ini adalah bukti empiris bahwa sistem web merupakan <strong>translasi langsung dari mesin perhitungan yang sebelumnya dirancang dan dioperasikan secara nyata</strong> di tingkat Implementing Partner (SR).</p>
+        
+        <div class="flow-steps">
+          <div class="flow-item">Data Mentah Lapangan</div>
+          <span class="flow-sep">→</span>
+          <div class="flow-item">Rumus & 136 Kolom Bantu</div>
+          <span class="flow-sep">→</span>
+          <div class="flow-item">Rekap by Kab/Kota & SSR</div>
+          <span class="flow-sep">→</span>
+          <div class="flow-item">39 Pivot Table & Slicer</div>
+          <span class="flow-sep">→</span>
+          <div class="flow-item">Dashboard Eksekutif</div>
+        </div>
+
+        <p>Alur perhitungan di Excel tersebut dipetakan satu per satu ke arsitektur web: tabel data mentah masuk ke PostgreSQL, logika agregasi dipindahkan ke KPI engine teruji (ADR-01), dan pemilihan wilayah slicer diubah menjadi penegakan hak akses berbasis peran (RBAC). Yang berevolusi bukan logikanya, melainkan <strong>penjaga integritasnya</strong>: rumus rentan dan tombol makro digantikan aturan bernomor yang dikunci oleh 1.003 uji otomatis.</p>
+
+        <div class="callout callout-ok">
+          <div class="callout-title">Catatan Asal Aturan</div>
+          <p>Aturan capaian tidak dibuat sendiri oleh pengembang. Seluruh definisi indikator berakar dari <strong>Petunjuk Teknis (Juknis) Penjangkauan dan Rujukan PR Spiritia 2024</strong>. Tugas pengembang adalah menerjemahkan teks petunjuk teknis tersebut menjadi logika komputasi yang konsisten, tanpa deviasi walau menghadapi data lapangan yang bervariasi.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Anatomi Berkas Excel Makro (Hasil Audit Struktur)</h2>
+        <p>Pemeriksaan biner terhadap berkas <code>.xlsb</code> (640 bagian arsip OLE/ZIP) menunjukkan pembagian empat lapisan kerja yang sangat terstruktur:</p>
+
+        <h3>2.1 Ringkasan Komponen Biner</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Komponen</th>
+              <th style="width: 100px; text-align: right;">Jumlah</th>
+              <th>Deskripsi & Peran</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Worksheet</td>
+              <td class="num">57</td>
+              <td>Lembar data mentah, referensi wilayah, perhitungan antara, rekapitulasi, dan dashboard.</td>
+            </tr>
+            <tr>
+              <td>Pivot Table</td>
+              <td class="num">39</td>
+              <td>38 pivot table di sheet <code>Pivot</code> untuk rekap capaian + 1 di <code>Weekly Chart</code>.</td>
+            </tr>
+            <tr>
+              <td>Pivot Cache</td>
+              <td class="num">2</td>
+              <td>Cache 1 merujuk ke named range <code>pivot</code>; Cache 2 merujuk ke lembar mingguan.</td>
+            </tr>
+            <tr>
+              <td>Slicer Cache</td>
+              <td class="num">4</td>
+              <td><code>Slicer_SSR</code>, <code>Slicer_Kota</code>, <code>Slicer_Lembaga_SR</code>, <code>Slicer_Nama_Kota</code>.</td>
+            </tr>
+            <tr>
+              <td>Chart Tersemat</td>
+              <td class="num">56</td>
+              <td>Grafik capaian visual untuk pemantauan tren bulanan dan perbandingan SSR.</td>
+            </tr>
+            <tr>
+              <td>Data Model Connection</td>
+              <td class="num">1</td>
+              <td>Koneksi internal Data Model menuju range rekapitulasi <code>Rekap!$B$5:$F$71</code>.</td>
+            </tr>
+            <tr>
+              <td>VBA Project</td>
+              <td class="num">1</td>
+              <td>Ukuran 136 KB berisi 3 modul kerja: <code>Sort</code>, <code>clear</code>, dan <code>Refresh</code>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2.2 Lapisan 1: Data Mentah dan 136 Kolom Bantu</h3>
+        <p>Dua sheet penampung transaksi lapangan menggunakan pola split: kolom formulir di sisi kiri, kolom pemisah, lalu rangkaian panjang kolom bantu berumus:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Lembar</th>
+              <th style="text-align: right;">Total Baris</th>
+              <th style="text-align: right;">Total Kolom</th>
+              <th style="text-align: right;">Kolom Input</th>
+              <th style="text-align: right;">Kolom Bantu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Penjangkauan</code></td>
+              <td class="num">379.503</td>
+              <td class="num">101</td>
+              <td class="num">28</td>
+              <td class="num">72</td>
+            </tr>
+            <tr>
+              <td><code>Rujukan</code></td>
+              <td class="num">86.868</td>
+              <td class="num">92</td>
+              <td class="num">27</td>
+              <td class="num">64</td>
+            </tr>
+            <tr>
+              <td><strong>Total Kolom Bantu</strong></td>
+              <td class="num" colspan="3">Kombinasi rumus baris transaksi</td>
+              <td class="num"><strong>136</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>136 kolom bantu tersebut bertugas menjawab kebutuhan validasi Juknis sebelum data dapat direkapitulasi:</p>
+        <ul class="points-list">
+          <li><strong>Kunci Unik Klien:</strong> Menggabungkan identitas lembaga, nomor UIC, dan tanggal kontak untuk mencegah duplikasi entri per orang.</li>
+          <li><strong>Pemisah Jalur Kontak:</strong> Memisahkan kontak tatap muka (TM) dan virtual (VO) agar tidak terjadi klaim ganda atas layanan yang sama.</li>
+          <li><strong>Penanda Kontak Pertama:</strong> Mengunci bahwa dalam satu periode pelaporan, capaian penjangkauan hanya dihitung dari kontak pertama per individu.</li>
+          <li><strong>Alat Pencegahan & Logistik:</strong> Menghitung kumulatif KIE, kondom, pelicin, dan jarum suntik steril per klien unik, bukan per frekuensi pertemuan.</li>
+          <li><strong>Rujukan Layanan:</strong> Memastikan rujukan ke tes HIV (VCT), pengobatan (ART), profilaksis pra-paparan (PrEP), dan skrining TB tercatat valid.</li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <div class="callout-title">Kelemahan Inheren Model Excel</div>
+          <p>136 kolom bantu ini menyimpan asumsi langsung di dalam formula sel (misalnya formula bersyarat <code>=1</code>). Ketika petugas lapangan mengosongkan status tertentu, rumus menghasilkan nilai nol semu. Hal ini yang melatarbelakangi kebutuhan memindahkan seluruh mesin hitung ke sistem web berbasis kode yang dapat diuji secara otomatis.</p>
+        </div>
+
+        <h3>2.3 Lapisan 2: Rekapitulasi Berjenjang</h3>
+        <p>Lembar <code>Rekap</code> memiliki dimensi 70 baris × 399 kolom yang menampung <strong>24.578 rumus agregasi</strong>. Rekapitulasi membagi angka berdasarkan lembaga tingkat pelaksana (SSR) dan wilayah kerja kabupaten/kota untuk menjamin pembagian target terdistribusi tepat.</p>
+
+        <h3>2.4 Lapisan 3 dan 4: Pivot, Slicer, dan Prosedur VBA</h3>
+        <p>39 pivot table yang dibangun di sheet <code>Pivot</code> tidak langsung membaca baris mentah 379 ribu baris (yang akan membuat berkas Excel mengalami freeze), melainkan membaca range yang sudah diringkas oleh lembar rekapitulasi. Tiga prosedur makro VBA bertindak sebagai operator:</p>
+        <ul class="points-list">
+          <li><code>Sort</code>: Menata urutan wilayah dan petugas secara alfabetis dan hierarki.</li>
+          <li><code>clear</code>: Menghapus area memori sementara sebelum siklus kalkulasi baru dimulai.</li>
+          <li><code>Refresh</code>: Memicu pembaruan seluruh pivot cache dan data model setelah perubahan rumus rekap selesai.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Peta Padanan Komprehensif: Excel Makro vs Sistem Web</h2>
+        <p>Tabel di bawah ini merinci bagaimana setiap instrumen yang sebelumnya berada di lembar kerja Excel diterjemahkan menjadi arsitektur web modern:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Fungsi Kerja</th>
+              <th>Wujud di Excel Makro</th>
+              <th>Implementasi di Sistem Web</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Penyimpanan Data</strong></td>
+              <td>Sheet <code>Penjangkauan</code> & <code>Rujukan</code></td>
+              <td>Tabel relasional PostgreSQL lokal (Docker) dengan indeks teroptimasi</td>
+            </tr>
+            <tr>
+              <td><strong>Kalkulasi Baris</strong></td>
+              <td>Sheet <code>S1 Penjangkauan</code> (~300 ribu baris formula)</td>
+              <td>Modul ingest data dan KPI Engine TypeScript (<code>lib/kpi/engine.ts</code>)</td>
+            </tr>
+            <tr>
+              <td><strong>Agregasi Wilayah</strong></td>
+              <td>Sheet <code>Rekap</code> (24.578 rumus, 399 kolom)</td>
+              <td>Tabel pra-agregat <code>kpi_summaries</code> & <code>kpi_harian</code> (standar ADR-01)</td>
+            </tr>
+            <tr>
+              <td><strong>Filter & Isolasi</strong></td>
+              <td>4 Slicer interaktif (Slicer_SSR, Slicer_Kota)</td>
+              <td>Role-Based Access Control (RBAC) ditegakkan di level query server</td>
+            </tr>
+            <tr>
+              <td><strong>Antarmuka Visual</strong></td>
+              <td>39 Pivot Table + 56 Chart Excel</td>
+              <td>10 Menu Dashboard Next.js interaktif dengan grafik ECharts responsif</td>
+            </tr>
+            <tr>
+              <td><strong>Pembaruan Data</strong></td>
+              <td>Tombol makro VBA <code>Refresh()</code></td>
+              <td>Background processing & backfill otomatis <code>tulisUlangIndikatorSsr()</code></td>
+            </tr>
+            <tr>
+              <td><strong>Target Program</strong></td>
+              <td>Sheet <code>Target</code> & <code>Target Indikator</code></td>
+              <td>Parser target dinamis 4 tipe klien aktif (<code>lib/target-format.ts</code>)</td>
+            </tr>
+            <tr>
+              <td><strong>Kesenjangan Capaian</strong></td>
+              <td>Sheet <code>GAP</code> (387 kolom matriks)</td>
+              <td>Modul Gap Analysis 11 kategori indikator kaskade penanggulangan</td>
+            </tr>
+            <tr>
+              <td><strong>Keamanan Data</strong></td>
+              <td>Tanpa proteksi (seluruh isi terbaca pemegang file)</td>
+              <td>Enkripsi cookie HMAC 12 jam, penyamaran identitas, dan zero open port</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Tiga Perubahan Nilai yang Terbukti di Sistem Web:</h3>
+        <ol class="points-list">
+          <li><strong>Logika Agregasi Tidak Lagi Rentan Rusak (ADR-01):</strong> Di Excel, penambahan baris rekap berisiko menjumlahkan baris agregat dua kali. Di web, arsitektur ADR-01 memisahkan baris total (<code>petugas_id IS NULL</code>) dari data staf, dan capaian semester wajib mengambil angka bulan terakhir, bukan akumulasi `SUM()` yang membengkakkan laporan hingga 3,5 kali lipat.</li>
+          <li><strong>Filter Tampilan Berevolusi Menjadi Hak Akses:</strong> Di Excel, pengguna bebas memindah slicer ke wilayah mana pun. Di web, wewenang SSR diisolasi ketat di backend; pengguna hanya dapat mengakses cakupan kerja yang diberikan wewenangnya.</li>
+          <li><strong>Penanganan Indikator Baru Tanpa Merusak Data Historis:</strong> Penambahan indikator baru pada lembar kerja sering membuat periode lalu tidak konsisten. Di sistem web, fungsi pemulihan <code>tulisUlangIndikatorSsr()</code> menjamin pengisian indikator baru secara retroaktif tanpa membatalkan status audit periode terkunci.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4. Kesimpulan & Batas Privasi</h2>
+        <p>Studi kasus ini menegaskan bahwa keahlian yang dimiliki bukan sekadar menghafal sintaksis pemrograman, melainkan <strong>kemampuan mendalam membaca kebutuhan programatik, membedah struktur data lapangan yang kompleks, dan menerjemahkannya menjadi sistem andal yang dapat dipertanggungjawabkan</strong>.</p>
+        
+        <div class="callout">
+          <div class="callout-title">Pernyataan Integritas Data</div>
+          <p>Seluruh angka yang disajikan dalam dokumen ini merujuk murni pada fakta struktur, volume komputasi, dan parameter arsitektur berkas. Dokumen ini tidak memuat NIK, nama lengkap klien penerima manfaat, nama lembaga pelaksana spesifik, maupun data capaian perorangan.</p>
+        </div>
+      </section>
+
+      <footer class="doc-footer">
+        <div>Arif Maulana Ade Putra · Portofolio Sistem Pemantauan Program</div>
+        <div>Dokumen Teknis Terverifikasi (2026)</div>
+      </footer>
+    </article>
+  </main>
+
+</body>
+</html>
+

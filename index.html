@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portofolio Arif Maulana Ade Putra. Dari pengolahan data program di Excel, sistem web yang diuji, sampai server yang dioperasikan sendiri.">
+  <meta name="author" content="Arif Maulana Ade Putra">
+  <meta name="theme-color" content="rgb(245 247 250)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arif Maulana Ade Putra | Portofolio">
+  <meta property="og:description" content="Menerjemahkan aturan pemantauan program menjadi sistem yang bisa diuji dan dirawat.">
+  <title>Arif Maulana Ade Putra | Portofolio</title>
+  <link rel="stylesheet" href="assets/gaya.css">
+  <script src="assets/data-galeri.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <!-- Design Read: Editorial terang dan navy mengikat cerita ke identitas sistem YPI; Plus Jakarta Sans menyatukan judul, narasi, dan angka dalam satu suara sambil menjaga tabel jelas; komposisi section mengikuti alur Excel, aturan, sistem, dan bukti. Dials: ENERGY 2 / RHYTHM 3 / MOTION 1. -->
+  <div class="halaman-watermark" aria-hidden="true">
+    <!-- Watermark 01: Microsoft Excel (Hero) -->
+    <svg class="wm-mark wm-excel-hero" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="25" y="15" width="80" height="90" rx="8" stroke="currentColor" stroke-width="3.5"/>
+      <line x1="55" y1="35" x2="95" y2="35" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="55" y1="55" x2="95" y2="55" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="55" y1="75" x2="95" y2="75" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="75" y1="20" x2="75" y2="100" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="15" y="32" width="45" height="56" rx="6" fill="var(--page)" stroke="currentColor" stroke-width="4"/>
+      <path d="M26 44L49 76M49 44L26 76" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Watermark 02: Node.js (Masalah & Peran) -->
+    <svg class="wm-mark wm-node-masalah" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 10L105 36V88L60 114L15 88V36L60 10Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M60 10V62M105 88L60 62M15 88L60 62" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M38 49L60 36L82 49V75L60 88L38 75V49Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="62" r="5" fill="currentColor"/>
+    </svg>
+
+    <!-- Watermark 03: Next.js (Karya) -->
+    <svg class="wm-mark wm-next-karya" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="48" stroke="currentColor" stroke-width="4"/>
+      <path d="M46 38V82" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M74 38V60" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M46 38L80 84" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Watermark 04: Docker (Arsitektur) -->
+    <svg class="wm-mark wm-docker-arsitektur" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="34" y="44" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="50" y="44" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="66" y="44" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="50" y="30" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="66" y="30" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <rect x="82" y="44" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M108 64C105 62 98 61 93 63C91 55 83 49 74 49H66V68H16C13 68 10 71 10 74C10 90 24 102 42 102H84C104 102 114 86 114 74C114 72 113 70 112 69C115 69 118 67 119 64C120 61 118 58 114 56C112 55 109 56 108 64Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="28" cy="80" r="3" fill="currentColor"/>
+    </svg>
+
+    <!-- Watermark 05: PostgreSQL (Bukti) -->
+    <svg class="wm-mark wm-postgres-bukti" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="60" cy="28" rx="42" ry="14" stroke="currentColor" stroke-width="4"/>
+      <path d="M18 28V58C18 66 37 72 60 72C83 72 102 66 102 58V28" stroke="currentColor" stroke-width="4"/>
+      <path d="M18 58V88C18 96 37 102 60 102C83 102 102 96 102 88V58" stroke="currentColor" stroke-width="4"/>
+      <line x1="36" y1="44" x2="84" y2="44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="36" y1="74" x2="84" y2="74" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Watermark 06: Cloudflare (Kontak) -->
+    <svg class="wm-mark wm-cf-kontak" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M96 56C93 40 78 28 61 28C47 28 35 36 29 48C14 50 2 62 2 77C2 93 15 105 31 105H95C108 105 118 94 118 82C118 69 108 58 96 56Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M42 90L72 50H56L68 34" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <header class="site-header">
+    <nav class="nav-utama wadah" aria-label="Navigasi utama">
+      <a class="brand" href="#atas">Arif Maulana Ade Putra</a>
+      <div class="nav-desktop">
+        <a href="#masalah">Masalah</a>
+        <a href="#peran">Peran</a>
+        <a href="#karya">Karya</a>
+        <a href="#bukti">Bukti</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <a class="tombol tombol-kecil nav-cv" href="dokumen/cv-arif-maulana-ade-putra-2026.pdf" download>Unduh CV</a>
+      <button class="menu-toggle" type="button" aria-controls="menu-mobile" aria-expanded="false">
+        <span class="sr-only">Buka navigasi</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <dialog class="menu-dialog" id="menu-mobile" aria-labelledby="menu-label">
+    <div class="menu-dialog-head">
+      <p id="menu-label">Navigasi halaman</p>
+      <button class="icon-button" type="button" data-close-menu aria-label="Tutup navigasi">Tutup</button>
+    </div>
+    <nav aria-label="Navigasi seluler">
+      <a href="#masalah">Masalah</a>
+      <a href="#peran">Peran</a>
+      <a href="#karya">Karya</a>
+      <a href="#bukti">Bukti</a>
+      <a href="#kontak">Kontak</a>
+      <a href="dokumen/cv-arif-maulana-ade-putra-2026.pdf" download>Unduh CV</a>
+    </nav>
+  </dialog>
+
+  <main>
+    <section class="hero wadah" id="atas" aria-labelledby="judul-utama">
+      <div class="hero-copy muncul">
+        <p class="label-atas">Portofolio, 2026</p>
+        <h1 id="judul-utama">Dari berkas Excel ke sistem yang berjalan mandiri</h1>
+        <p class="hero-intro">Saya Arif Maulana Ade Putra. Sejak 2019 saya mengawal data pemantauan program HIV. Berbekal Juknis PR Spiritia 2024, saya menerjemahkan aturan capaian menjadi sistem web yang teruji, lalu mengoperasikan servernya sendiri.</p>
+        <div class="hero-actions">
+          <a class="tombol tombol-utama" href="#karya">Lihat karya</a>
+          <a class="tombol tombol-sekunder" href="dokumen/cv-arif-maulana-ade-putra-2026.pdf" download>Unduh CV</a>
+        </div>
+      </div>
+      <div class="hero-media muncul">
+        <div class="hero-foto-kartu">
+          <img class="hero-foto" src="assets/img/foto-arif-maulana-opt.jpg" alt="Foto profesional Arif Maulana Ade Putra" width="160" height="200" fetchpriority="high" decoding="async">
+          <div class="hero-foto-caption">
+            <span class="hero-foto-nama">Arif Maulana Ade Putra</span>
+            <span class="hero-foto-peran">Monev &amp; Pengembang Sistem</span>
+          </div>
+        </div>
+        <div class="angka-hero" aria-label="Ringkasan bukti">
+          <div class="angka-item">
+            <span class="angka-label">Aturan teknis</span>
+            <strong>84</strong>
+            <span>butir bernomor</span>
+          </div>
+          <div class="angka-item">
+            <span class="angka-label">Uji otomatis</span>
+            <strong>1.003</strong>
+            <span>lulus, 6 dilewati</span>
+          </div>
+          <div class="angka-item">
+            <span class="angka-label">Infrastruktur</span>
+            <strong>1</strong>
+            <span>server mandiri yang saya kelola</span>
+          </div>
+          <!-- Sumber angka: PRD bagian 10. Uji otomatis: npm run test, Vitest, 12 November 2026. -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section wadah" id="masalah" aria-labelledby="judul-masalah">
+      <div class="section-intro muncul">
+        <p class="label-atas">02 / Kenapa ini dikerjakan</p>
+        <h2 id="judul-masalah">Satu lembar kerja menyimpan terlalu banyak keputusan</h2>
+        <p class="lead">Dulu satu berkas Excel menampung 379.503 baris data penjangkauan, 24.578 rumus rekap, 39 pivot table, dan satu tombol <code>Refresh</code>. Semuanya tampak beres, sampai definisinya bergeser.</p>
+      </div>
+      <div class="risiko-list muncul">
+        <article class="risiko-item">
+          <p class="label-atas">Risiko 01</p>
+          <p>Baris total ikut terhitung bersama baris petugas, sehingga angka capaian berlipat ganda.</p>
+        </article>
+        <article class="risiko-item">
+          <p class="label-atas">Risiko 02</p>
+          <p>Nilai bulanan yang bersifat kumulatif dijumlahkan ulang, membuat laporan bengkak hingga 3,5 kali.</p>
+        </article>
+        <article class="risiko-item">
+          <p class="label-atas">Risiko 03</p>
+          <p>Status tes kesehatan yang sensitif terpapar sebagai teks terbuka di layar kerja.</p>
+        </article>
+      </div>
+      <p class="sumber-kecil muncul">Angka struktur bersumber dari audit berkas Dashboard Capaian YPI, diperiksa 12 November 2026.</p>
+    </section>
+
+    <section class="section section-surface" id="peran" aria-labelledby="judul-peran">
+      <div class="wadah">
+        <div class="section-intro muncul">
+          <p class="label-atas">03 / Peran saya: penerjemah</p>
+          <h2 id="judul-peran">Mengubah kalimat aturan menjadi perilaku sistem</h2>
+          <p class="lead">Ketentuan datang dalam bentuk kalimat Juknis, bukan tiket teknis yang siap koding. Tugas saya adalah mengubah aturan itu menjadi perilaku mesin yang konsisten, lalu menguncinya lewat pengujian agar tidak bergeser ketika ada perubahan.</p>
+        </div>
+        <div class="tabel-bungkus muncul">
+          <table class="tabel-aturan">
+            <thead>
+              <tr>
+                <th scope="col">Aturan Juknis</th>
+                <th scope="col">Wujudnya di sistem</th>
+                <th scope="col">Yang mengunci</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Aturan Juknis">Rekap capaian per kabupaten/kota dan per SSR</td>
+                <td data-label="Wujudnya di sistem">Tabel pra-agregat memisahkan baris total dari data petugas. Nilai semester diambil dari bulan terakhir, bukan penjumlahan bulanan.</td>
+                <td data-label="Yang mengunci"><code>ADR-01</code> dan uji KPI</td>
+              </tr>
+              <tr>
+                <td data-label="Aturan Juknis">Slicer untuk memilih wilayah dan lembaga</td>
+                <td data-label="Wujudnya di sistem">Cakupan wewenang SSR dikunci langsung di server. Pengguna tidak bisa mengintip data di luar wilayah tugasnya.</td>
+                <td data-label="Yang mengunci">RBAC dan uji isolasi SSR</td>
+              </tr>
+              <tr>
+                <td data-label="Aturan Juknis">Tombol <code>Refresh</code> untuk menghitung ulang</td>
+                <td data-label="Wujudnya di sistem">Kalkulasi otomatis yang mengisi indikator baru ke periode lampau tanpa merusak data yang sudah dikunci.</td>
+                <td data-label="Yang mengunci"><code>tulisUlangIndikatorSsr()</code> dan uji pemulihan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wadah" id="karya" aria-labelledby="judul-karya">
+      <div class="section-intro section-intro-wide muncul">
+        <div>
+          <p class="label-atas">04 / Karya</p>
+          <h2 id="judul-karya">Tiga karya, satu alur pembuktian</h2>
+        </div>
+        <p class="lead">Data mentah diolah di Excel, alurnya dibangun ulang menjadi sistem web, lalu dioperasikan di atas server mandiri yang saya kelola.</p>
+      </div>
+      <div class="karya-grid">
+        <article class="kartu-karya muncul">
+          <svg class="kartu-watermark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <rect x="25" y="15" width="80" height="90" rx="8" stroke="currentColor" stroke-width="4"/>
+            <line x1="55" y1="35" x2="95" y2="35" stroke="currentColor" stroke-width="3"/>
+            <line x1="55" y1="55" x2="95" y2="55" stroke="currentColor" stroke-width="3"/>
+            <line x1="55" y1="75" x2="95" y2="75" stroke="currentColor" stroke-width="3"/>
+            <line x1="75" y1="20" x2="75" y2="100" stroke="currentColor" stroke-width="3"/>
+            <rect x="15" y="32" width="45" height="56" rx="6" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="4"/>
+            <path d="M26 44L49 76M49 44L26 76" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+          </svg>
+          <p class="label-atas">A / Cetak biru</p>
+          <h3>Mesin Perhitungan Excel</h3>
+          <p>Cetak biru 57 sheet dan 24 ribu rumus yang menjadi fondasi logika sebelum dipindahkan ke sistem web.</p>
+          <dl class="angka-mini">
+            <div><dt>Sheet</dt><dd>57</dd></div>
+            <div><dt>Pivot table</dt><dd>39</dd></div>
+            <div><dt>Grafik</dt><dd>56</dd></div>
+          </dl>
+          <button class="tautan-tombol" type="button" data-open-dialog="detail-excel">Buka rincian Excel</button>
+        </article>
+        <article class="kartu-karya kartu-karya-gelap muncul">
+          <svg class="kartu-watermark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <circle cx="60" cy="60" r="48" stroke="currentColor" stroke-width="4.5"/>
+            <path d="M46 38V82" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M74 38V60" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M46 38L80 84" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+          </svg>
+          <p class="label-atas">B / Aplikasi web</p>
+          <h3>Sistem Pemantauan dan Dashboard</h3>
+          <p>Menerapkan seluruh aturan pemantauan program ke dalam aplikasi web teruji dengan visualisasi interaktif.</p>
+          <dl class="angka-mini">
+            <div><dt>Aturan teknis</dt><dd>84</dd></div>
+            <div><dt>Uji otomatis</dt><dd>1.003</dd></div>
+            <div><dt>Kategori gap</dt><dd>11</dd></div>
+          </dl>
+          <button class="tautan-tombol" type="button" data-open-dialog="detail-web">Buka rincian sistem</button>
+        </article>
+        <article class="kartu-karya muncul">
+          <svg class="kartu-watermark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <path d="M60 10L105 36V88L60 114L15 88V36L60 10Z" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+            <path d="M60 10V62M105 88L60 62M15 88L60 62" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M38 49L60 36L82 49V75L60 88L38 75V49Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+            <circle cx="60" cy="62" r="5.5" fill="currentColor"/>
+          </svg>
+          <p class="label-atas">C / Operasi</p>
+          <h3>Infrastruktur Server Mandiri</h3>
+          <p>Menjalankan aplikasi dan basis data di server fisik lokal, diakses aman melalui Cloudflare Tunnel tanpa port terbuka.</p>
+          <dl class="angka-mini">
+            <div><dt>Port publik</dt><dd>0</dd></div>
+            <div><dt>Runtime</dt><dd>PM2</dd></div>
+            <div><dt>Basis data</dt><dd>PostgreSQL</dd></div>
+          </dl>
+          <button class="tautan-tombol" type="button" data-open-dialog="detail-server">Buka rincian server</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-arsitektur" id="arsitektur" aria-labelledby="judul-arsitektur">
+      <div class="wadah arsitektur-layout">
+        <div class="section-intro muncul">
+          <p class="label-atas">05 / Arsitektur</p>
+          <h2 id="judul-arsitektur">Aplikasi dan data hidup di server yang saya kelola</h2>
+          <p class="lead">Cloudflare Tunnel menjadi pintu akses yang aman. Seluruh aplikasi dan basis data beroperasi di server lokal Windows 10 / M710s.</p>
+          <p class="catatan-arsitektur">Data program tersimpan di server lokal. Tidak ada port masuk yang dibuka ke internet publik, sehingga kerahasiaan data tetap terjaga.</p>
+        </div>
+        <figure class="diagram-bungkus muncul">
+          <svg class="diagram diagram-desktop" viewBox="0 0 680 380" width="680" height="380" role="img" aria-labelledby="diagram-title diagram-desc">
+            <title id="diagram-title">Alur arsitektur aplikasi</title>
+            <desc id="diagram-desc">Peramban mengakses aplikasi melalui Cloudflare Tunnel. Aplikasi Next.js berjalan dengan PM2 di server Windows 10 M710s, dengan PostgreSQL di Docker.</desc>
+            <defs>
+              <marker id="panah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0 0L8 4L0 8Z" fill="#2f6fb5"/>
+              </marker>
+            </defs>
+            <path class="garis-diagram" d="M155 95H236" marker-end="url(#panah)"/>
+            <path class="garis-diagram" d="M392 95H456" marker-end="url(#panah)"/>
+            <path class="garis-diagram" d="M535 145V223" marker-end="url(#panah)"/>
+            <rect class="simpul" x="20" y="52" width="135" height="86" rx="8"/>
+            <text class="judul-simpul" x="87" y="88" text-anchor="middle">Peramban</text>
+            <text class="isi-simpul" x="87" y="111" text-anchor="middle">akses aplikasi</text>
+            <rect class="simpul" x="236" y="52" width="156" height="86" rx="8"/>
+            <text class="judul-simpul" x="314" y="88" text-anchor="middle">Cloudflare</text>
+            <text class="isi-simpul" x="314" y="111" text-anchor="middle">Tunnel</text>
+            <rect class="simpul simpul-server" x="456" y="35" width="158" height="110" rx="8"/>
+            <text class="judul-simpul teks-putih" x="535" y="72" text-anchor="middle">Windows 10</text>
+            <text class="isi-simpul teks-putih" x="535" y="96" text-anchor="middle">M710s</text>
+            <text class="isi-simpul teks-putih" x="535" y="120" text-anchor="middle">server lokal</text>
+            <rect class="simpul" x="405" y="223" width="260" height="104" rx="8"/>
+            <text class="judul-simpul" x="535" y="261" text-anchor="middle">PM2 dan Next.js</text>
+            <text class="isi-simpul" x="535" y="285" text-anchor="middle">aplikasi web</text>
+            <text class="isi-simpul" x="535" y="307" text-anchor="middle">Docker dan PostgreSQL</text>
+            <text class="label-diagram" x="20" y="205">AKSES</text>
+            <text class="isi-simpul" x="20" y="230">Tidak ada port masuk terbuka.</text>
+            <text class="isi-simpul" x="20" y="253">Data program berada di basis data</text>
+            <text class="isi-simpul" x="20" y="276">lokal pada server.</text>
+          </svg>
+          <ol class="diagram-mobile" aria-label="Komponen arsitektur aplikasi">
+            <li><strong>Peramban</strong><span>Mengakses antarmuka aplikasi melalui koneksi aman.</span></li>
+            <li><strong>Cloudflare Tunnel</strong><span>Meneruskan lalu lintas tanpa membuka port masuk publik.</span></li>
+            <li class="simpul-mobile-server"><strong>Windows 10 / M710s</strong><span>Perangkat server fisik mandiri tempat sistem beroperasi.</span></li>
+            <li><strong>PM2 dan Next.js</strong><span>Mengelola proses aplikasi web agar tetap aktif.</span></li>
+            <li><strong>Docker dan PostgreSQL</strong><span>Menyimpan dan mengamankan basis data secara lokal.</span></li>
+          </ol>
+          <figcaption>Diagram diringkas dari portofolio server. Tidak menampilkan kredensial atau data klien.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-surface" id="bukti" aria-labelledby="judul-bukti">
+      <div class="wadah">
+        <div class="section-intro muncul">
+          <p class="label-atas">06 / Bukti</p>
+          <h2 id="judul-bukti">Angka nyata yang bisa diuji</h2>
+          <p class="lead">Setiap angka di bawah ini berakar dari dokumen proyek, repositori kode, dan struktur berkas yang dapat diperiksa langsung.</p>
+        </div>
+        <div class="bukti-grid muncul">
+          <div class="bukti-kelompok bukti-kelompok-excel">
+            <h3>Struktur berkas Excel</h3>
+            <dl class="bukti-daftar">
+              <div><dt>Lembar kerja aktif</dt><dd>57 sheet</dd></div>
+              <div><dt>Baris transaksi</dt><dd>379.503</dd></div>
+              <div><dt>Rumus rekapitulasi</dt><dd>24.578</dd></div>
+              <div><dt>Pivot table</dt><dd>39</dd></div>
+              <div><dt>Slicer cache</dt><dd>4</dd></div>
+            </dl>
+          </div>
+          <div class="bukti-kelompok">
+            <h3>Sistem web</h3>
+            <dl class="bukti-daftar">
+              <div><dt>Aturan teknis bernomor</dt><dd>84</dd></div>
+              <div><dt>Uji otomatis lulus</dt><dd>1.003</dd></div>
+              <div><dt>Uji dilewati</dt><dd>6</dd></div>
+              <div><dt>Kategori gap analysis</dt><dd>11</dd></div>
+            </dl>
+          </div>
+          <div class="bukti-kelompok">
+            <h3>Server mandiri</h3>
+            <dl class="bukti-daftar">
+              <div><dt>Server fisik</dt><dd>1 M710s</dd></div>
+              <div><dt>Port masuk terbuka</dt><dd>0</dd></div>
+              <div><dt>Runtime aplikasi</dt><dd>PM2</dd></div>
+              <div><dt>Basis data</dt><dd>PostgreSQL</dd></div>
+            </dl>
+          </div>
+        </div>
+        <!-- Sumber angka: PRD bagian 10; uji otomatis bertanggal 12 November 2026. Data Excel hanya fakta struktur, tidak menampilkan baris individu. -->
+        <p class="sumber-kecil catatan-angka muncul">Data Excel menunjukkan cakupan historis dan volume komputasi. Angka ini tidak disandingkan langsung dengan baris basis data web.</p>
+
+        <div class="galeri-head muncul">
+          <div>
+            <p class="label-atas">Tangkapan layar</p>
+            <h3>Bukti visual tampilan dan alur sistem</h3>
+          </div>
+          <div class="filter-galeri" role="group" aria-label="Filter tangkapan layar">
+            <button type="button" class="filter-button aktif" data-filter="semua" aria-pressed="true">Semua <span>44</span></button>
+            <button type="button" class="filter-button" data-filter="excel" aria-pressed="false">Excel <span>21</span></button>
+            <button type="button" class="filter-button" data-filter="web" aria-pressed="false">Sistem web <span>23</span></button>
+          </div>
+        </div>
+        <p class="galeri-status" id="galeri-status" role="status" aria-live="polite">Menyiapkan galeri...</p>
+        <p class="galeri-kosong" id="galeri-kosong" hidden>Belum ada tangkapan layar untuk filter ini.</p>
+        <p class="galeri-error" id="galeri-error" role="alert" hidden>Beberapa gambar tidak dapat dimuat. Periksa apakah folder assets masih lengkap.</p>
+        <div class="galeri-grid" id="galeri" aria-label="Galeri tangkapan layar"></div>
+      </div>
+    </section>
+
+    <section class="section wadah" id="cara-kerja" aria-labelledby="judul-cara-kerja">
+      <div class="cara-kerja-layout">
+        <div class="section-intro muncul">
+          <p class="label-atas">07 / Cara kerja</p>
+          <h2 id="judul-cara-kerja">AI membantu menulis kode. Kendali keputusan tetap di tangan saya.</h2>
+        </div>
+        <div class="disiplin-list muncul">
+          <article class="disiplin-item">
+            <p class="label-atas">Definisi</p>
+            <p>Kebutuhan program, batas arsitektur, dan format data dikunci lebih dulu lewat PRD sebelum baris kode pertama ditulis.</p>
+          </article>
+          <article class="disiplin-item">
+            <p class="label-atas">Penerapan</p>
+            <p>Kalimat Juknis diterjemahkan menjadi perilaku sistem yang konsisten, bukan diserahkan pada tebakan mesin.</p>
+          </article>
+          <article class="disiplin-item">
+            <p class="label-atas">Pemeriksaan</p>
+            <p>1.003 uji otomatis mengawal setiap aturan agar pembaruan fitur tidak merusak logika yang sudah berjalan.</p>
+          </article>
+          <article class="disiplin-item">
+            <p class="label-atas">Privasi</p>
+            <p>Data program dan kerahasiaan identitas klien tidak pernah dipakai untuk bahan tampilan portofolio.</p>
+          </article>
+          <article class="disiplin-item">
+            <p class="label-atas">Keputusan akhir</p>
+            <p>Saya memegang kendali atas standar kelulusan dan memverifikasi setiap hasil sebelum sistem beroperasi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-kontak" id="kontak" aria-labelledby="judul-kontak">
+      <div class="wadah kontak-layout">
+        <div class="kontak-copy muncul">
+          <p class="label-atas">08 / Kontak</p>
+          <h2 id="judul-kontak">Mari bicarakan pengelolaan data yang membutuhkan ketepatan tinggi.</h2>
+          <div class="kontak-profil">
+            <img class="kontak-avatar" src="assets/img/foto-arif-maulana-square.jpg" alt="Foto profil Arif Maulana Ade Putra" width="58" height="58" loading="lazy" decoding="async">
+            <div>
+              <p class="kontak-nama">Arif Maulana Ade Putra</p>
+              <p class="kontak-kota">Jakarta Timur</p>
+            </div>
+          </div>
+          <a class="email-link" href="mailto:ariefmaulanaputra@gmail.com">ariefmaulanaputra@gmail.com</a>
+        </div>
+        <div class="kontak-dokumen muncul">
+          <p class="label-atas">Dokumen resmi</p>
+          <a class="tombol tombol-utama" href="dokumen/cv-arif-maulana-ade-putra-2026.pdf" download>Unduh CV</a>
+          <a href="dokumen/01-portofolio-perhitungan-excel.pdf" download>Portofolio perhitungan Excel</a>
+          <a href="dokumen/02-portofolio-website-monitoring.pdf" download>Portofolio sistem web</a>
+          <a href="dokumen/03-portofolio-private-server-windows10.pdf" download>Portofolio server pribadi</a>
+          <a href="dokumen/01-studi-kasus-excel-makro.pdf" download>Studi kasus Excel (PDF)</a>
+        </div>
+      </div>
+      <div class="wadah catatan-privasi muncul">
+        <p>Halaman ini tidak memuat data pribadi klien maupun identitas penerima manfaat.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wadah footer-grid">
+      <div>
+        <p class="footer-nama">Arif Maulana Ade Putra</p>
+        <p>Jakarta Timur</p>
+        <a href="mailto:ariefmaulanaputra@gmail.com">ariefmaulanaputra@gmail.com</a>
+      </div>
+      <div>
+        <p class="label-atas">Dokumen portofolio</p>
+        <a href="dokumen/01-portofolio-perhitungan-excel.pdf">Perhitungan Excel</a>
+        <a href="dokumen/02-portofolio-website-monitoring.pdf">Sistem web</a>
+        <a href="dokumen/03-portofolio-private-server-windows10.pdf">Server pribadi</a>
+        <a href="dokumen/01-studi-kasus-excel-makro.pdf">Studi kasus Excel</a>
+      </div>
+      <div>
+        <p>Halaman ini tidak memuat data klien.</p>
+        <p>Terakhir diperbarui 13 November 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="detail-dialog" id="detail-excel" aria-labelledby="judul-detail-excel">
+    <div class="dialog-head">
+      <p class="label-atas">A / Cetak biru</p>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian Excel">Tutup</button>
+    </div>
+    <h2 id="judul-detail-excel">Mesin perhitungan Excel</h2>
+    <p>Berkas Excel makro ini merupakan cetak biru dari seluruh alur data dan kalkulasi sebelum dipindahkan ke web. Angka berikut mencerminkan kompleksitas lembar kerja, bukan data perorangan.</p>
+    <ul class="detail-list">
+      <li>57 sheet aktif, 39 pivot table, dan 4 slicer pengendali data.</li>
+      <li>56 grafik capaian visual dan 3 prosedur makro VBA untuk otomatisasi alur.</li>
+      <li>24.578 rumus matematika pada lembar rekapitulasi capaian.</li>
+      <li>Rumus rentan dan tombol makro kini telah digantikan oleh logika teruji di sistem web.</li>
+    </ul>
+    <div class="dialog-links">
+      <a class="tautan-dokumen" href="dokumen/01-portofolio-perhitungan-excel.pdf">Buka portofolio Excel</a>
+      <a class="tautan-dokumen" href="dokumen/01-studi-kasus-excel-makro.pdf">Buka studi kasus Excel (PDF)</a>
+      <a class="tautan-dokumen" href="dokumen/01-studi-kasus-excel-makro.html">Versi web studi kasus</a>
+    </div>
+  </dialog>
+
+  <dialog class="detail-dialog" id="detail-web" aria-labelledby="judul-detail-web">
+    <div class="dialog-head">
+      <p class="label-atas">B / Aplikasi web</p>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian sistem">Tutup</button>
+    </div>
+    <h2 id="judul-detail-web">Sistem Monitoring dan Dashboard</h2>
+    <p>Aplikasi web ini menerjemahkan seluruh ketentuan pemantauan program HIV ke dalam alur kerja yang teruji, mulai dari penerimaan data mentah lapangan hingga sajian dashboard eksekutif.</p>
+    <ul class="detail-list">
+      <li>84 aturan teknis bernomor diterapkan langsung ke dalam kode sistem.</li>
+      <li>1.003 uji otomatis lulus tanpa cela untuk memastikan ketepatan kalkulasi.</li>
+      <li>Batasan akses wilayah diperiksa ketat di server sesuai wewenang petugas.</li>
+      <li>11 kategori kesenjangan membantu menelusuri target program yang belum tercapai.</li>
+    </ul>
+    <a class="tautan-dokumen" href="dokumen/02-portofolio-website-monitoring.pdf">Buka portofolio sistem web</a>
+  </dialog>
+
+  <dialog class="detail-dialog" id="detail-server" aria-labelledby="judul-detail-server">
+    <div class="dialog-head">
+      <p class="label-atas">C / Operasi</p>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian server">Tutup</button>
+    </div>
+    <h2 id="judul-detail-server">Server pribadi</h2>
+    <p>Aplikasi dan basis data beroperasi penuh di server lokal mandiri. Akses pengguna dari luar diamankan melalui Cloudflare Tunnel tanpa perlu membuka port masuk ke internet publik.</p>
+    <ul class="detail-list">
+      <li>Menggunakan perangkat server fisik M710s dengan sistem operasi Windows 10.</li>
+      <li>PM2 menjaga proses aplikasi Next.js tetap aktif dan terpantau.</li>
+      <li>PostgreSQL beroperasi di dalam kontainer Docker pada server lokal.</li>
+      <li>Nol port publik terbuka, meminimalkan risiko serangan dari jaringan luar.</li>
+    </ul>
+    <a class="tautan-dokumen" href="dokumen/03-portofolio-private-server-windows10.pdf">Buka portofolio server</a>
+  </dialog>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Pratinjau tangkapan layar">
+    <button class="lightbox-close icon-button" type="button" aria-label="Tutup pratinjau">Tutup</button>
+    <button class="lightbox-prev" type="button" aria-label="Tangkapan sebelumnya">Sebelumnya</button>
+    <figure>
+      <img id="lightbox-image" alt="" width="1400" height="875">
+      <figcaption id="lightbox-caption" aria-live="polite"></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Tangkapan berikutnya">Berikutnya</button>
+  </dialog>
+</body>
+</html>

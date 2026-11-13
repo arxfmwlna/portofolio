@@ -1,0 +1,6 @@
+# Sistem Operasi & Berkas Sementara
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+~$*
