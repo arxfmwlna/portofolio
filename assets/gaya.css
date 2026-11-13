@@ -417,15 +417,29 @@ h3 {
   align-self: center;
 }
 
-.hero-foto-kartu {
+.hero-profil-kartu {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
   width: 100%;
-  max-width: 160px;
+  max-width: 480px;
   margin-inline: auto 0;
-  border-radius: 12px;
-  overflow: hidden;
+  padding: 14px;
+  border-radius: 14px;
   border: 1px solid var(--line-strong);
   background: var(--surface);
-  box-shadow: 0 4px 14px rgb(15 42 74 / 6%);
+  box-shadow: 0 4px 16px rgb(15 42 74 / 6%);
+}
+
+.hero-profil-foto-wrap {
+  width: 130px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--page);
 }
 
 .hero-foto {
@@ -438,14 +452,15 @@ h3 {
 }
 
 .hero-foto-caption {
-  padding: 8px 10px;
+  padding: 6px 6px 7px;
   background: var(--surface);
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .hero-foto-nama {
   display: block;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--navy-900);
   line-height: 1.25;
@@ -453,10 +468,77 @@ h3 {
 
 .hero-foto-peran {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--muted);
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.3;
+}
+
+.hero-profil-bio {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 2px 2px 0;
+}
+
+.bio-blok {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bio-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.bio-isi {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.bio-isi strong {
+  color: var(--navy-900);
+  font-weight: 650;
+}
+
+.bio-karir {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bio-karir li {
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: var(--ink);
+  padding-left: 9px;
+  border-left: 2px solid var(--navy-600);
+}
+
+.bio-karir strong {
+  display: block;
+  font-size: 11px;
+  color: var(--navy-900);
+  font-weight: 700;
+}
+
+.bio-karir span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
 }
 
 .angka-hero {
@@ -1428,8 +1510,8 @@ code {
     gap: 24px;
   }
 
-  .hero-foto-kartu {
-    max-width: 130px;
+  .hero-profil-kartu {
+    max-width: 480px;
     margin-inline: 0 auto;
   }
 
@@ -1533,6 +1615,17 @@ code {
   .hero {
     gap: 30px;
     padding-block: 54px 58px;
+  }
+
+  .hero-profil-kartu {
+    flex-direction: column;
+    max-width: 320px;
+    gap: 12px;
+  }
+
+  .hero-profil-foto-wrap {
+    width: 120px;
+    margin: 0 auto;
   }
 
   h1 {
