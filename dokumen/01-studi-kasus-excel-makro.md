@@ -16,6 +16,8 @@
 
 Sistem monitoring berbasis web yang saya bangun bukan sekadar proyek contoh atau aplikasi yang lahir dari asumsi kosong. Berkas Excel makro ini adalah bukti nyata bahwa sistem web tersebut merupakan **hasil translasi langsung dari mesin kalkulasi yang sebelumnya telah dirancang dan dioperasikan di lapangan** pada tingkat Implementing Partner (SR).
 
+Lembar kerja Excel makro ini adalah **murni 100% hasil keahlian dan rancangan mandiri saya** dari pengalaman bertahun-tahun mengelola data lapangan tanpa bantuan AI. Ketika kebutuhan monitoring berkembang untuk mengawal implementasi *Theory of Change* program, AI saya manfaatkan **murni sebagai alat bantu koding saat membangun sistem web (building web)** guna mempercepat penulisan kode Next.js/TypeScript dan mengunci 1.003 uji otomatis. Penguasaan domain monev, logika kaskade, dan arsitektur data lapangan sepenuhnya tetap berada di tangan saya.
+
 Alur kalkulasi di lembar kerja Excel berjalan bertahap:
 
 1. **Data mentah lapangan** (penjangkauan dan rujukan) diinput oleh tim.
@@ -28,7 +30,7 @@ Alur di Excel tersebut dipetakan satu per satu ke arsitektur sistem web: tabel t
 
 Yang berevolusi bukan logikanya, melainkan **penjaga kebenarannya**: rumus sel yang rentan tersenggol dan tombol makro manual kini digantikan oleh aturan bernomor yang dikawal ketat oleh 1.003 uji otomatis.
 
-> **Sumber Aturan Resmi:** Seluruh definisi indikator mengacu pada **Petunjuk Teknis (Juknis) Penjangkauan dan Rujukan PR Spiritia 2024**. Tugas saya sebagai pengembang dan staf monev adalah menerjemahkan teks juknis tersebut menjadi algoritma komputasi yang konsisten, tanpa deviasi walau data lapangan memiliki banyak variasi penulisan.
+> **Sumber Aturan Resmi & Pemodelan Theory of Change:** Seluruh definisi indikator mengacu pada **Petunjuk Teknis (Juknis) Penjangkauan dan Rujukan PR Spiritia 2024** serta kerangka kerja *Theory of Change* penanggulangan HIV. Tugas saya sebagai pengembang dan staf monev adalah menerjemahkan kebutuhan monev tersebut menjadi algoritma komputasi yang konsisten, tanpa deviasi walau data lapangan memiliki banyak variasi penulisan.
 
 ---
 
@@ -146,8 +148,11 @@ Struktur teknis ini didokumentasikan ke dalam tiga berkas portofolio resmi:
 
 ---
 
-## 5. Batasan Privasi dan Kepatuhan Etika Data
+## 5. Kesimpulan dan Batasan Privasi
 
+Studi kasus ini menegaskan bahwa keahlian inti yang dimiliki adalah **pemahaman mendalam terhadap Theory of Change program, penguasaan juknis monev, dan kemampuan membedah struktur data lapangan kompleks**, sebagaimana terbukti pada lembar kerja Excel makro yang 100% dirancang mandiri. Pemanfaatan AI hadir murni sebagai akselerator koding saat membangun sistem web, sementara kendali atas validitas logika, desain arsitektur, dan integritas data tetap dipegang penuh oleh keahlian manusia.
+
+### Batasan Privasi dan Kepatuhan Etika Data:
 - Berkas biner `.xlsb` asli disimpan di media penyimpanan privat yang terisolasi dan tidak diunggah ke repositori publik.
 - Seluruh identitas individu (nama klien, nomor induk kependudukan, nomor rekam medis, dan alamat) telah disanitasi penuh.
 - Visualisasi publik hanya menampilkan indikator agregat dan persentase capaian tanpa mengekspos rekam kesehatan perorangan.
