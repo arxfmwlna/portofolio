@@ -20,8 +20,6 @@ Portofolio ini mendokumentasikan transformasi alur data dari lembar kerja Excel 
 ```text
 ├── index.html                             # Halaman utama portofolio (landing page)
 ├── README.md                              # Dokumentasi repositori
-├── prd-landing-page-portofolio.md         # Dokumen PRD spesifikasi teknis (v1.2)
-├── design-landing-page-portofolio.md      # Dokumen desain & panduan visual (v1.1)
 ├── assets/
 │   ├── app.js                             # Skrip interaksi, filter galeri & dialog modal
 │   ├── data-galeri.js                     # Data manifest 44 tangkapan layar sistem

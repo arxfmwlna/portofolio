@@ -5,3 +5,6 @@ Thumbs.db
 *.bak
 ~$*
 
+# Dokumen Spesifikasi Internal
+design-landing-page-portofolio.md
+prd-landing-page-portofolio.md
