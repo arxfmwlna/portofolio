@@ -6,14 +6,14 @@ Landing page portofolio personal dan dokumentasi teknis rekayasa sistem pemantau
 
 Portofolio ini mendokumentasikan transformasi alur data dari lembar kerja Excel bervolume tinggi menjadi sistem web teruji yang dioperasikan di atas server fisik mandiri:
 
-1. **Cetak Biru Logika Analitik (Excel Makro):**  
-   Mesin kalkulasi 57 sheet, 379.503 baris data penjangkauan, 136 kolom bantu validasi, dan 24.578 rumus rekapitulasi capaian program HIV berbasis Petunjuk Teknis (Juknis) Penjangkauan dan Rujukan PR Spiritia 2024. Dirancang langsung dari pengalaman lapangan untuk memodelkan seluruh aturan indikator program.
+1. **Perancangan Formula di Excel (Cetak Biru):**  
+   Menyusun 57 lembar kerja, 379.503 baris data penjangkauan, 136 kolom bantu, dan 24.578 rumus rekapitulasi capaian program HIV berbasis Petunjuk Teknis (Juknis) Penjangkauan dan Rujukan PR Spiritia 2024. Seluruh logika hitung dirancang langsung dari pengalaman mengolah data lapangan untuk memodelkan indikator program.
 
-2. **Aplikasi Web dan Dashboard Teruji:**  
-   Penerjemahan kebutuhan pemantauan implementasi *Theory of Change* dan 84 aturan teknis Juknis ke dalam aplikasi web terintegrasi (Next.js, PostgreSQL). Seluruh logika bisnis dan kalkulasi dikunci oleh 1.003 uji otomatis untuk menjamin integritas data tanpa deviasi, dengan AI dimanfaatkan secara terarah sebagai akselerator penulisan kode.
+2. **Pengembangan Aplikasi dan Dasbor Web:**  
+   Menerjemahkan kerangka Theory of Change dan 84 aturan teknis Juknis ke dalam aplikasi web (Next.js dan PostgreSQL). Sistem mengunci seluruh kalkulasi dengan 1.003 pengujian otomatis agar angka laporan tidak menyimpang, dengan bantuan AI untuk mempercepat penulisan kode program.
 
-3. **Infrastruktur Server Mandiri (On-Premise):**  
-   Pengadaan, perakitan, dan pengoperasian server lokal (Lenovo ThinkCentre M710s, Windows 10, PM2, Docker PostgreSQL) yang diakses aman via Cloudflare Tunnel terenkripsi dengan nol port masuk publik terbuka.
+3. **Pengelolaan Server Fisik di Kantor (On-Premise):**  
+   Menyiapkan dan mengoperasikan server fisik lokal (Lenovo ThinkCentre M710s, Windows 10, PM2, Docker PostgreSQL) yang diakses secara aman melalui Cloudflare Tunnel tanpa membuka port publik ke internet.
 
 ## Struktur Repositori
 

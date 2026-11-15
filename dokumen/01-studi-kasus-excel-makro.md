@@ -14,9 +14,9 @@
 
 ## 1. Mengapa Berkas Ini Menjadi Fondasi Portofolio
 
-Sistem monitoring berbasis web yang saya bangun bukan proyek contoh atau aplikasi yang lahir dari asumsi teoretis. Berkas Excel makro ini adalah bukti nyata bahwa sistem web merupakan **translasi langsung dari mesin kalkulasi operasional yang telah dirancang dan dijalankan di lapangan** pada tingkat Implementing Partner (SR).
+Sistem pemantauan web yang saya bangun bukan proyek contoh atau aplikasi yang lahir dari asumsi teoretis. Berkas Excel makro ini membuktikan bahwa aplikasi web tersebut merupakan **translasi langsung dari mesin perhitungan operasional yang dirancang dan dijalankan di lapangan** pada tingkat Implementing Partner (SR).
 
-Lembar kerja analitik ini dirancang langsung dari pengalaman bertahun-tahun mengelola data lapangan. Ketika skala pemantauan berkembang untuk mengawal implementasi *Theory of Change* program, seluruh aturan bisnis, struktur kaskade indikator, dan skenario validasi dirumuskan dari keahlian domain Monev. AI dimanfaatkan secara terarah sebagai akselerator teknis untuk mempercepat penulisan sintaksis kode Next.js, pengetikan TypeScript, dan penyusunan 1.003 uji otomatis. Penguasaan tata kelola data lapangan dan integritas kalkulasi sepenuhnya berada di bawah kendali pengembang.
+Saya merancang buku kerja ini dari pengalaman bertahun-tahun mengelola alur data lapangan. Ketika kebutuhan pemantauan berkembang untuk mengawal implementasi *Theory of Change* program, saya menyusun aturan bisnis, struktur kaskade indikator, dan skenario validasi berdasarkan Petunjuk Teknis PR Spiritia. Saya memanfaatkan AI hanya sebagai alat bantu saat menulis kode Next.js, menyusun tipe data TypeScript, dan menyiapkan 1.003 pengujian otomatis, sedangkan penguasaan alur data dan integritas perhitungan tetap berada di bawah kendali saya.
 
 Alur kalkulasi di lembar kerja Excel berjalan bertahap:
 
@@ -150,7 +150,7 @@ Struktur teknis ini didokumentasikan ke dalam tiga berkas portofolio resmi:
 
 ## 5. Kesimpulan dan Batasan Privasi
 
-Studi kasus ini menegaskan bahwa nilai utama rekayasa sistem ini berakar dari penguasaan domain Monev: **pemahaman rantai intervensi Theory of Change, kepatuhan terhadap Petunjuk Teknis PR Spiritia, dan kemampuan membedah struktur data lapangan yang kompleks**. Pemanfaatan AI berperan sebagai akselerator penulisan kode pada tahap pengembangan web, sedangkan arsitektur data, logika agregasi, dan validitas perhitungan tetap dikendalikan penuh oleh keahlian profesional manusia.
+Studi kasus ini menegaskan bahwa nilai utama rekayasa sistem ini terletak pada keahlian pemantauan program: **memahami rantai intervensi Theory of Change, menaati Petunjuk Teknis PR Spiritia, dan menguasai struktur data lapangan yang rumit**. Pemanfaatan AI berperan sebagai alat bantu penulisan kode pada tahap pengembangan web, sedangkan arsitektur data, logika agregasi, dan validitas perhitungan dikendalikan penuh oleh keahlian manusia.
 
 ### Batasan Privasi dan Kepatuhan Etika Data:
 - Berkas biner `.xlsb` asli disimpan di media penyimpanan privat yang terisolasi dan tidak diunggah ke repositori publik.

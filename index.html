@@ -111,7 +111,7 @@
       <div class="hero-copy muncul">
         <p class="label-atas">Portofolio, 2026</p>
         <h1 id="judul-utama">Dari berkas Excel ke sistem yang berjalan mandiri</h1>
-        <p class="hero-intro">Saya Arif Maulana Ade Putra. Sejak 2019 saya bekerja di bidang pemantauan dan evaluasi (Monev) program HIV. Tugas utama saya adalah memastikan aturan petunjuk teknis berjalan konsisten di lapangan dan di sistem: merancang formula kalkulasi di Excel, membangun aplikasi web pemantauan yang divalidasi oleh uji otomatis, serta mengoperasikan server fisik secara mandiri.</p>
+        <p class="hero-intro">Saya Arif Maulana Ade Putra. Sejak 2019, saya mengelola data pemantauan dan evaluasi (Monev) program HIV. Saya menerjemahkan aturan Petunjuk Teknis (Juknis) PR Spiritia menjadi sistem kerja yang andal: mulai dari menyusun formula hitung di Excel, membangun aplikasi web dengan ribuan pengujian otomatis, hingga mengelola server fisik sendiri di kantor.</p>
         <div class="hero-actions">
           <a class="tombol tombol-utama" href="#karya">Lihat karya</a>
           <a class="tombol tombol-sekunder" href="dokumen/cv-arif-maulana-ade-putra-2026.pdf" download>Unduh CV</a>
@@ -170,32 +170,32 @@
     <section class="section wadah" id="masalah" aria-labelledby="judul-masalah">
       <div class="section-intro muncul">
         <p class="label-atas">02 / Kenapa ini dikerjakan</p>
-        <h2 id="judul-masalah">Satu lembar kerja menyimpan terlalu banyak keputusan</h2>
-        <p class="lead">Seluruh pemantauan program awalnya bertumpu pada satu berkas kerja Excel: memproses 379.503 baris data penjangkauan, 24.578 rumus rekapitulasi, dan 39 pivot table dengan satu tombol <code>Refresh</code>. Semuanya tampak berjalan wajar, sampai terjadi perubahan definisi indikator di lapangan.</p>
+        <h2 id="judul-masalah">Satu lembar kerja menanggung beban terlalu besar</h2>
+        <p class="lead">Dulu seluruh pemantauan bergantung pada satu berkas Excel: menampung 379.503 baris data penjangkauan, 24.578 rumus rekapitulasi, 39 tabel pivot, dan satu tombol <code>Refresh</code>. Semuanya tampak berjalan baik, sampai definisi capaian di lapangan bergeser.</p>
       </div>
       <div class="risiko-list muncul">
         <article class="risiko-item">
           <p class="label-atas">Risiko 01</p>
-          <p>Baris subtotal ikut terakumulasi bersama data input petugas lapangan, menyebabkan angka capaian terhitung ganda.</p>
+          <p>Rumus menjumlahkan baris subtotal bersama data mentah petugas, sehingga angka capaian melonjak dua kali lipat.</p>
         </article>
         <article class="risiko-item">
           <p class="label-atas">Risiko 02</p>
-          <p>Indikator yang bersifat kumulatif semesteran dijumlahkan ulang setiap bulan, membuat pelaporan capaian membengkak hingga 3,5 kali lipat.</p>
+          <p>Penjumlahan ulang angka kumulatif setiap bulan menggelembungkan laporan capaian hingga 3,5 kali lipat dari angka sebenarnya.</p>
         </article>
         <article class="risiko-item">
           <p class="label-atas">Risiko 03</p>
-          <p>Data hasil tes medis klien yang sensitif terbuka langsung di lembar kerja tanpa pembatasan hak akses.</p>
+          <p>Lembar kerja menampilkan status tes medis klien secara terbuka tanpa penyaringan hak akses pengguna.</p>
         </article>
       </div>
-      <p class="sumber-kecil muncul">Angka struktur bersumber dari audit berkas Dashboard Capaian YPI, diperiksa 12 November 2026.</p>
+      <p class="sumber-kecil muncul">Data struktur berasal dari audit berkas Dasbor Capaian YPI, diperiksa pada 12 November 2026.</p>
     </section>
 
     <section class="section section-surface" id="peran" aria-labelledby="judul-peran">
       <div class="wadah">
         <div class="section-intro muncul">
           <p class="label-atas">03 / Peran saya: penerjemah</p>
-          <h2 id="judul-peran">Menerjemahkan Theory of Change ke perilaku sistem</h2>
-          <p class="lead">Aturan pemantauan program bersumber dari Theory of Change dan Petunjuk Teknis PR Spiritia, bukan tiket spesifikasi teknis siap pakai. Tantangan terbesarnya adalah menjaga logika program agar tidak bias saat diubah menjadi sistem digital. Saya merumuskan alur kalkulasi dari kebutuhan lapangan, lalu menguncinya ke dalam kode aplikasi web melalui pengujian otomatis yang ketat.</p>
+          <h2 id="judul-peran">Menerjemahkan aturan program ke dalam logika sistem</h2>
+          <p class="lead">Petunjuk Teknis PR Spiritia dan kerangka Theory of Change memuat aturan program untuk petugas lapangan, bukan instruksi yang langsung bisa dibaca komputer. Tugas saya menjembatani keduanya: saya merancang alur perhitungan berdasarkan alur kerja nyata, lalu memastikan setiap aturan berjalan konsisten melalui pengujian kode otomatis.</p>
         </div>
         <div class="tabel-bungkus muncul">
           <table class="tabel-aturan">
@@ -208,19 +208,19 @@
             </thead>
             <tbody>
               <tr>
-                <td data-label="Aturan Juknis">Rekap capaian per kabupaten/kota dan per SSR</td>
-                <td data-label="Wujudnya di sistem">Tabel pra-agregasi memisahkan baris subtotal dari data mentah petugas. Nilai semester diambil dari status periode terakhir, bukan penjumlahan sederhana.</td>
+                <td data-label="Aturan Juknis">Rekapitulasi capaian per kabupaten/kota dan per SSR</td>
+                <td data-label="Wujudnya di sistem">Sistem memisahkan baris total dari data entri petugas dan mengambil nilai capaian semester dari bulan penutupan, bukan menjumlahkan angka bulanan secara mentah.</td>
                 <td data-label="Yang mengunci"><code>ADR-01</code> dan uji logika KPI</td>
               </tr>
               <tr>
-                <td data-label="Aturan Juknis">Slicer untuk memilih wilayah dan lembaga</td>
-                <td data-label="Wujudnya di sistem">Pemisahan wewenang data dikunci di tingkat server. Staf pelaksana (SSR) hanya dapat mengakses data dalam batas wilayah kerjanya.</td>
-                <td data-label="Yang mengunci">RBAC dan uji isolasi wilayah SSR</td>
+                <td data-label="Aturan Juknis">Slicer penyaring wilayah dan lembaga</td>
+                <td data-label="Wujudnya di sistem">Server membatasi akses setiap pengguna secara otomatis sehingga staf SSR hanya dapat melihat dan mengolah data di wilayah tugasnya sendiri.</td>
+                <td data-label="Yang mengunci">Hak akses peran (RBAC) dan uji isolasi data SSR</td>
               </tr>
               <tr>
-                <td data-label="Aturan Juknis">Tombol <code>Refresh</code> untuk rekonsiliasi data</td>
-                <td data-label="Wujudnya di sistem">Proses kalkulasi otomatis yang mampu menerapkan indikator baru ke periode lampau tanpa merusak data yang telah dikunci.</td>
-                <td data-label="Yang mengunci"><code>tulisUlangIndikatorSsr()</code> dan uji regresi</td>
+                <td data-label="Aturan Juknis">Tombol <code>Refresh</code> untuk pembaruan data</td>
+                <td data-label="Wujudnya di sistem">Sistem memperbarui perhitungan secara otomatis di latar belakang dan dapat memasukkan indikator baru ke periode lampau tanpa mengubah data audit yang sudah sah.</td>
+                <td data-label="Yang mengunci"><code>tulisUlangIndikatorSsr()</code> dan uji pemulihan data</td>
               </tr>
             </tbody>
           </table>
@@ -234,7 +234,7 @@
           <p class="label-atas">04 / Karya</p>
           <h2 id="judul-karya">Tiga karya, satu alur pembuktian</h2>
         </div>
-        <p class="lead">Ketiga karya ini membentuk satu kesatuan alur kerja: dimulai dari pemodelan formula analitik di Excel, dibangun menjadi sistem web pemantauan yang teruji, lalu dioperasikan mandiri pada server fisik lokal.</p>
+        <p class="lead">Ketiga proyek ini terhubung dalam satu kesinambungan kerja: saya merancang rumus dan alur data di Excel, membangun sistem web pemantauan yang teruji, lalu mengoperasikan server fisiknya sendiri di kantor.</p>
       </div>
       <div class="karya-grid">
         <article class="kartu-karya muncul">
@@ -248,11 +248,11 @@
             <path d="M26 44L49 76M49 44L26 76" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
           </svg>
           <p class="label-atas">A / Cetak biru</p>
-          <h3>Mesin Perhitungan Excel</h3>
-          <p>Cetak biru analitik berisi 57 sheet dan 24.578 formula yang memetakan seluruh kalkulasi indikator program sebelum dimigrasikan ke sistem web.</p>
+          <h3>Buku Kerja Perhitungan Excel</h3>
+          <p>Buku kerja Excel berisi 57 lembar kerja dan 24.578 rumus yang memetakan seluruh perhitungan indikator program sebelum beralih ke sistem web.</p>
           <dl class="angka-mini">
-            <div><dt>Sheet</dt><dd>57</dd></div>
-            <div><dt>Pivot table</dt><dd>39</dd></div>
+            <div><dt>Lembar kerja</dt><dd>57</dd></div>
+            <div><dt>Tabel pivot</dt><dd>39</dd></div>
             <div><dt>Grafik</dt><dd>56</dd></div>
           </dl>
           <button class="tautan-tombol" type="button" data-open-dialog="detail-excel">Buka rincian Excel</button>
@@ -265,11 +265,11 @@
             <path d="M46 38L80 84" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
           </svg>
           <p class="label-atas">B / Aplikasi web</p>
-          <h3>Sistem Pemantauan dan Dashboard</h3>
-          <p>Aplikasi web teruji yang menerjemahkan alur Theory of Change ke dalam sistem pemantauan terstruktur, tervalidasi oleh 1.003 pengujian otomatis.</p>
+          <h3>Aplikasi Pemantauan dan Dasbor Web</h3>
+          <p>Aplikasi web yang menerjemahkan alur Theory of Change ke dalam sistem pemantauan siap pakai, terverifikasi oleh 1.003 pengujian otomatis.</p>
           <dl class="angka-mini">
             <div><dt>Aturan teknis</dt><dd>84</dd></div>
-            <div><dt>Uji otomatis</dt><dd>1.003</dd></div>
+            <div><dt>Pengujian otomatis</dt><dd>1.003</dd></div>
             <div><dt>Kategori gap</dt><dd>11</dd></div>
           </dl>
           <button class="tautan-tombol" type="button" data-open-dialog="detail-web">Buka rincian sistem</button>
@@ -282,11 +282,11 @@
             <circle cx="60" cy="62" r="5.5" fill="currentColor"/>
           </svg>
           <p class="label-atas">C / Operasi</p>
-          <h3>Infrastruktur Server Mandiri</h3>
-          <p>Server fisik lokal yang dioperasikan mandiri untuk menjaga kedaulatan data sensitif, diakses aman via Cloudflare Tunnel tanpa membuka port publik.</p>
+          <h3>Server Fisik Mandiri di Kantor</h3>
+          <p>Server fisik lokal yang saya kelola langsung untuk menjaga keamanan data program, diakses melalui Cloudflare Tunnel tanpa membuka port publik ke internet.</p>
           <dl class="angka-mini">
             <div><dt>Port publik</dt><dd>0</dd></div>
-            <div><dt>Runtime</dt><dd>PM2</dd></div>
+            <div><dt>Pengelola proses</dt><dd>PM2</dd></div>
             <div><dt>Basis data</dt><dd>PostgreSQL</dd></div>
           </dl>
           <button class="tautan-tombol" type="button" data-open-dialog="detail-server">Buka rincian server</button>
@@ -298,9 +298,9 @@
       <div class="wadah arsitektur-layout">
         <div class="section-intro muncul">
           <p class="label-atas">05 / Arsitektur</p>
-          <h2 id="judul-arsitektur">Aplikasi dan data berjalan di infrastruktur mandiri</h2>
-          <p class="lead">Akses publik dari luar diamankan melalui Cloudflare Tunnel terenkripsi. Seluruh pemrosesan aplikasi dan basis data beroperasi pada server fisik lokal Windows 10 (M710s).</p>
-          <p class="catatan-arsitektur">Data pemantauan tetap tersimpan di server internal dan tidak dikirim ke infrastruktur pihak ketiga. Ketiadaan port masuk publik melindungi sistem dari pemindaian terbuka di internet.</p>
+          <h2 id="judul-arsitektur">Arsitektur sistem dan penyimpanan data lokal</h2>
+          <p class="lead">Pengguna mengakses aplikasi melalui Cloudflare Tunnel yang aman, sedangkan seluruh proses pengolahan dan basis data berjalan langsung di server fisik kantor (Windows 10 / M710s).</p>
+          <p class="catatan-arsitektur">Data program tersimpan di server lokal dan tidak keluar ke layanan cloud pihak ketiga. Sistem tidak membuka port masuk sama sekali sehingga terlindung dari pemindaian jaringan luar.</p>
         </div>
         <figure class="diagram-bungkus muncul">
           <svg class="diagram diagram-desktop" viewBox="0 0 680 380" width="680" height="380" role="img" aria-labelledby="diagram-title diagram-desc">
@@ -334,13 +334,13 @@
             <text class="isi-simpul" x="20" y="276">lokal pada server.</text>
           </svg>
           <ol class="diagram-mobile" aria-label="Komponen arsitektur aplikasi">
-            <li><strong>Peramban</strong><span>Mengakses antarmuka aplikasi melalui koneksi HTTPS terenkripsi.</span></li>
-            <li><strong>Cloudflare Tunnel</strong><span>Menghubungkan peramban ke server lokal tanpa membuka port masuk publik.</span></li>
-            <li class="simpul-mobile-server"><strong>Windows 10 / M710s</strong><span>Perangkat server fisik mandiri tempat seluruh sistem beroperasi.</span></li>
-            <li><strong>PM2 dan Next.js</strong><span>Mengelola siklus hidup proses aplikasi web agar stabil melayani permintaan.</span></li>
-            <li><strong>Docker dan PostgreSQL</strong><span>Menyimpan dan mengisolasi basis data relasional secara lokal.</span></li>
+            <li><strong>Peramban</strong><span>Mengakses antarmuka aplikasi melalui tautan web aman.</span></li>
+            <li><strong>Cloudflare Tunnel</strong><span>Meneruskan lalu lintas data ke server lokal tanpa membuka celah port publik.</span></li>
+            <li class="simpul-mobile-server"><strong>Windows 10 / M710s</strong><span>Server fisik di kantor tempat seluruh aplikasi dan basis data beroperasi.</span></li>
+            <li><strong>PM2 dan Next.js</strong><span>Menjaga aplikasi web tetap aktif melayani pengguna sepanjang hari.</span></li>
+            <li><strong>Docker dan PostgreSQL</strong><span>Menyimpan dan mengamankan seluruh data transaksi program secara lokal.</span></li>
           </ol>
-          <figcaption>Diagram arsitektur sistem. Menampilkan alur koneksi aman tanpa memaparkan kredensial maupun data klien.</figcaption>
+          <figcaption>Diagram arsitektur sistem. Menampilkan alur koneksi tanpa memuat kredensial atau identitas klien.</figcaption>
         </figure>
       </div>
     </section>
@@ -350,16 +350,16 @@
         <div class="section-intro muncul">
           <p class="label-atas">06 / Bukti</p>
           <h2 id="judul-bukti">Angka nyata yang bisa diuji</h2>
-          <p class="lead">Setiap metrik berikut bersumber langsung dari repositori kode aktif, log pengujian otomatis, dan struktur berkas yang dapat diverifikasi.</p>
+          <p class="lead">Setiap angka di bawah ini merujuk langsung pada repositori kode, catatan uji otomatis, dan struktur berkas yang dapat diperiksa keabsahannya.</p>
         </div>
         <div class="bukti-grid muncul">
           <div class="bukti-kelompok bukti-kelompok-excel">
             <h3>Struktur berkas Excel</h3>
             <dl class="bukti-daftar">
-              <div><dt>Lembar kerja aktif</dt><dd>57 sheet</dd></div>
+              <div><dt>Lembar kerja aktif</dt><dd>57 lembar kerja</dd></div>
               <div><dt>Baris transaksi</dt><dd>379.503</dd></div>
               <div><dt>Rumus rekapitulasi</dt><dd>24.578</dd></div>
-              <div><dt>Pivot table</dt><dd>39</dd></div>
+              <div><dt>Tabel pivot</dt><dd>39</dd></div>
               <div><dt>Slicer cache</dt><dd>4</dd></div>
             </dl>
           </div>
@@ -367,9 +367,9 @@
             <h3>Sistem web</h3>
             <dl class="bukti-daftar">
               <div><dt>Aturan teknis bernomor</dt><dd>84</dd></div>
-              <div><dt>Uji otomatis lulus</dt><dd>1.003</dd></div>
-              <div><dt>Uji dilewati</dt><dd>6</dd></div>
-              <div><dt>Kategori gap analysis</dt><dd>11</dd></div>
+              <div><dt>Pengujian otomatis lulus</dt><dd>1.003</dd></div>
+              <div><dt>Pengujian dilewati</dt><dd>6</dd></div>
+              <div><dt>Kategori kesenjangan</dt><dd>11</dd></div>
             </dl>
           </div>
           <div class="bukti-kelompok">
@@ -377,18 +377,18 @@
             <dl class="bukti-daftar">
               <div><dt>Server fisik</dt><dd>1 M710s</dd></div>
               <div><dt>Port masuk terbuka</dt><dd>0</dd></div>
-              <div><dt>Runtime aplikasi</dt><dd>PM2</dd></div>
+              <div><dt>Pengelola proses</dt><dd>PM2</dd></div>
               <div><dt>Basis data</dt><dd>PostgreSQL</dd></div>
             </dl>
           </div>
         </div>
         <!-- Sumber angka: PRD bagian 10; uji otomatis bertanggal 12 November 2026. Data Excel hanya fakta struktur, tidak menampilkan baris individu. -->
-        <p class="sumber-kecil catatan-angka muncul">Data Excel mencerminkan kompleksitas formula dan volume pemrosesan historis, bukan perbandingan langsung dengan baris tabel basis data web.</p>
+        <p class="sumber-kecil catatan-angka muncul">Angka Excel menggambarkan skala perhitungan dan riwayat data, bukan perbandingan langsung dengan baris tabel pada basis data web.</p>
 
         <div class="galeri-head muncul">
           <div>
             <p class="label-atas">Tangkapan layar</p>
-            <h3>Dokumentasi visual tampilan dan fungsionalitas sistem</h3>
+            <h3>Tangkapan layar antarmuka dan alur kerja sistem</h3>
           </div>
           <div class="filter-galeri" role="group" aria-label="Filter tangkapan layar">
             <button type="button" class="filter-button aktif" data-filter="semua" aria-pressed="true">Semua <span>44</span></button>
@@ -407,29 +407,29 @@
       <div class="cara-kerja-layout">
         <div class="section-intro muncul">
           <p class="label-atas">07 / Cara kerja</p>
-          <h2 id="judul-cara-kerja">Logika pemantauan dirumuskan dari domain Monev, AI mempercepat implementasi kode</h2>
-          <p class="lead">AI tidak memahami dinamika penjangkauan lapangan maupun batasan Petunjuk Teknis. Seluruh aturan bisnis, struktur basis data, dan skenario validasi dirumuskan dari keahlian Monev saya, sementara AI dimanfaatkan sebagai akselerator teknis untuk menulis sintaksis kode dan mempercepat penyusunan pengujian otomatis.</p>
+          <h2 id="judul-cara-kerja">Keahlian manusia menentukan logika, AI mempercepat penulisan kode</h2>
+          <p class="lead">AI tidak pernah bekerja di lapangan dan tidak memahami aturan Petunjuk Teknis. Karena itu, saya merancang sendiri seluruh logika perhitungan, pembatasan hak akses, dan kriteria pengujian. AI saya gunakan hanya sebagai alat bantu saat menulis kode Next.js dan skrip pengujian otomatis.</p>
         </div>
         <div class="disiplin-list muncul">
           <article class="disiplin-item">
-            <p class="label-atas">Pemodelan analitik di Excel</p>
-            <p>57 sheet, 136 kolom bantu, dan 24.578 rumus rekapitulasi dirancang langsung dari pengalaman lapangan untuk memvalidasi alur kalkulasi sebelum proses migrasi.</p>
+            <p class="label-atas">Formula mandiri di Excel</p>
+            <p>Saya merancang 57 lembar kerja, 136 kolom bantu, dan 24.578 rumus dari pengalaman lapangan untuk menguji alur perhitungan sebelum memindahkannya ke web.</p>
           </article>
           <article class="disiplin-item">
-            <p class="label-atas">Rantai dampak Theory of Change</p>
-            <p>Logika pemantauan diturunkan langsung dari alur intervensi program: penjangkauan populasi kunci, tindak lanjut rujukan ke layanan kesehatan, hingga retensi pengobatan.</p>
+            <p class="label-atas">Alur Theory of Change</p>
+            <p>Saya menyusun indikator pemantauan berdasarkan alur kerja nyata: dari penjangkauan populasi kunci, pendampingan rujukan tes, hingga kesinambungan pengobatan.</p>
           </article>
           <article class="disiplin-item">
-            <p class="label-atas">AI sebagai akselerator teknis</p>
-            <p>AI dimanfaatkan secara terarah pada tahap pengembangan web untuk mempercepat penulisan komponen Next.js, pengetikan TypeScript, dan kerangka pengujian.</p>
+            <p class="label-atas">Bantuan AI untuk menulis kode</p>
+            <p>Saya memanfaatkan AI saat membangun web untuk mempercepat penulisan komponen Next.js, struktur TypeScript, dan kerangka pengujian otomatis.</p>
           </article>
           <article class="disiplin-item">
-            <p class="label-atas">Verifikasi 1.003 uji otomatis</p>
-            <p>Setiap aturan teknis bernomor divalidasi oleh rangkaian uji otomatis (unit dan integration test) untuk memastikan kode berjalan persis sesuai mandat Juknis.</p>
+            <p class="label-atas">1.003 Pengujian otomatis</p>
+            <p>Saya mengunci setiap aturan Juknis ke dalam 1.003 skrip uji otomatis. Sistem menolak perubahan kode jika ada perhitungan yang menyimpang dari aturan.</p>
           </article>
           <article class="disiplin-item">
-            <p class="label-atas">Tata kelola dan kendali penuh</p>
-            <p>Mulai dari arsitektur sistem, isolasi hak akses pengguna, pembersihan data sensitif, hingga pengoperasian server fisik berada sepenuhnya di bawah kendali saya.</p>
+            <p class="label-atas">Tanggung jawab penuh</p>
+            <p>Saya mengawasi seluruh rancangan sistem: menjaga kerahasiaan data pasien, mengatur hak akses pengguna, dan memelihara server fisik di kantor.</p>
           </article>
         </div>
       </div>
@@ -439,7 +439,7 @@
       <div class="wadah kontak-layout">
         <div class="kontak-copy muncul">
           <p class="label-atas">08 / Kontak</p>
-          <h2 id="judul-kontak">Mari bicarakan pengelolaan data yang membutuhkan ketepatan tinggi.</h2>
+          <h2 id="judul-kontak">Hubungi saya untuk pengelolaan data program yang membutuhkan ketelitian tinggi.</h2>
           <div class="kontak-profil">
             <img class="kontak-avatar" src="assets/img/foto-arif-maulana-square.jpg" alt="Foto profil Arif Maulana Ade Putra" width="58" height="58" loading="lazy" decoding="async">
             <div>
@@ -459,7 +459,7 @@
         </div>
       </div>
       <div class="wadah catatan-privasi muncul">
-        <p>Halaman ini tidak memuat data pribadi klien maupun identitas penerima manfaat.</p>
+        <p>Halaman ini tidak memuat data pribadi klien atau penerima manfaat program.</p>
       </div>
     </section>
   </main>
@@ -490,13 +490,13 @@
       <p class="label-atas">A / Cetak biru</p>
       <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian Excel">Tutup</button>
     </div>
-    <h2 id="judul-detail-excel">Mesin perhitungan Excel</h2>
-    <p>Berkas kerja analitik ini menjadi fondasi logika dan cetak biru perhitungan sebelum sistem web dikembangkan. Angka di bawah menggambarkan skala komputasi formula, tanpa memuat data identitas perorangan.</p>
+    <h2 id="judul-detail-excel">Buku kerja perhitungan Excel</h2>
+    <p>Buku kerja Excel makro ini memuat seluruh formula dan alur hitung sebelum saya pindahkan ke aplikasi web. Angka berikut menunjukkan volume perhitungan dan struktur berkas tanpa memuat data pribadi klien.</p>
     <ul class="detail-list">
-      <li>57 sheet aktif, 39 pivot table, dan 4 slicer pengendali data.</li>
-      <li>56 grafik capaian visual dan 3 prosedur makro VBA untuk otomatisasi alur kerja.</li>
-      <li>24.578 rumus kalkulasi aktif pada lembar rekapitulasi capaian.</li>
-      <li>Logika perhitungan yang sebelumnya bertumpu pada makro Excel kini telah ditingkatkan menjadi kode teruji di aplikasi web.</li>
+      <li>57 lembar kerja aktif, 39 tabel pivot, dan 4 slicer penyaring data.</li>
+      <li>56 grafik visual dan 3 prosedur makro VBA untuk otomasi alur kerja.</li>
+      <li>24.578 rumus perhitungan aktif pada lembar rekapitulasi capaian.</li>
+      <li>Perhitungan yang sebelumnya bergantung pada rumus lembar kerja kini telah beralih ke kode teruji di aplikasi web.</li>
     </ul>
     <div class="dialog-links">
       <a class="tautan-dokumen" href="dokumen/01-portofolio-perhitungan-excel.pdf">Buka portofolio Excel</a>
@@ -510,13 +510,13 @@
       <p class="label-atas">B / Aplikasi web</p>
       <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian sistem">Tutup</button>
     </div>
-    <h2 id="judul-detail-web">Sistem Monitoring dan Dashboard</h2>
-    <p>Aplikasi web ini menerjemahkan kebutuhan pemantauan program berbasis Theory of Change dan Juknis resmi ke dalam alur kerja sistematis, mulai dari pemrosesan data mentah lapangan hingga visualisasi dashboard indikator eksekutif.</p>
+    <h2 id="judul-detail-web">Aplikasi pemantauan dan dasbor web</h2>
+    <p>Aplikasi web ini menerjemahkan aturan Petunjuk Teknis PR Spiritia dan alur Theory of Change ke dalam sistem informasi siap pakai, mulai dari penerimaan data lapangan hingga laporan capaian indikator.</p>
     <ul class="detail-list">
-      <li>84 butir aturan teknis bernomor diterapkan secara langsung ke dalam logika sistem.</li>
-      <li>1.003 uji otomatis lulus validasi untuk menjamin presisi perhitungan tanpa deviasi.</li>
-      <li>Isolasi data berbasis peran (RBAC) membatasi akses lembaga pelaksana (SSR) hanya pada wilayah kerjanya.</li>
-      <li>11 kategori gap analysis membantu memetakan kesenjangan capaian target program secara akurat.</li>
+      <li>Sistem menerapkan 84 butir aturan teknis bernomor ke dalam logika pemrograman.</li>
+      <li>1.003 pengujian otomatis mengawal ketepatan hitungan agar tidak terjadi kesalahan angka.</li>
+      <li>Sistem membatasi hak akses pengguna agar staf SSR hanya dapat melihat data di wilayah kerjanya.</li>
+      <li>11 kategori analisis kesenjangan membantu petugas memantau target yang belum tercapai.</li>
     </ul>
     <a class="tautan-dokumen" href="dokumen/02-portofolio-website-monitoring.pdf">Buka portofolio sistem web</a>
   </dialog>
@@ -526,13 +526,13 @@
       <p class="label-atas">C / Operasi</p>
       <button class="icon-button" type="button" data-close-dialog aria-label="Tutup rincian server">Tutup</button>
     </div>
-    <h2 id="judul-detail-server">Server pribadi</h2>
-    <p>Aplikasi dan basis data beroperasi penuh di server fisik lokal mandiri. Akses pengguna dari luar diamankan melalui Cloudflare Tunnel terenkripsi tanpa mengekspos port terbuka ke jaringan publik.</p>
+    <h2 id="judul-detail-server">Server fisik mandiri di kantor</h2>
+    <p>Aplikasi dan basis data berjalan langsung di server fisik kantor. Pengguna mengakses sistem dari luar melalui Cloudflare Tunnel yang aman tanpa perlu membuka port masuk ke jaringan publik.</p>
     <ul class="detail-list">
-      <li>Menggunakan perangkat server fisik Lenovo ThinkCentre M710s dengan sistem operasi Windows 10.</li>
-      <li>Process manager (PM2) menjaga ketersediaan layanan Next.js tetap aktif dan terpantau.</li>
-      <li>Basis data relasional PostgreSQL beroperasi di dalam kontainer Docker pada server lokal.</li>
-      <li>Nol port masuk publik terbuka, meminimalkan risiko serangan dan pemindaian jaringan dari luar.</li>
+      <li>Sistem menggunakan perangkat mini PC Lenovo ThinkCentre M710s berbasis Windows 10.</li>
+      <li>Manajer proses PM2 menjaga aplikasi Next.js tetap aktif sepanjang waktu.</li>
+      <li>Basis data PostgreSQL berjalan di dalam kontainer Docker lokal.</li>
+      <li>Server tidak membuka port publik sama sekali untuk mencegah akses tidak sah dari luar jaringan.</li>
     </ul>
     <a class="tautan-dokumen" href="dokumen/03-portofolio-private-server-windows10.pdf">Buka portofolio server</a>
   </dialog>
