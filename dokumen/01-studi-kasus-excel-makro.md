@@ -14,9 +14,9 @@
 
 ## 1. Mengapa Berkas Ini Menjadi Fondasi Portofolio
 
-Sistem monitoring berbasis web yang saya bangun bukan sekadar proyek contoh atau aplikasi yang lahir dari asumsi kosong. Berkas Excel makro ini adalah bukti nyata bahwa sistem web tersebut merupakan **hasil translasi langsung dari mesin kalkulasi yang sebelumnya telah dirancang dan dioperasikan di lapangan** pada tingkat Implementing Partner (SR).
+Sistem monitoring berbasis web yang saya bangun bukan proyek contoh atau aplikasi yang lahir dari asumsi teoretis. Berkas Excel makro ini adalah bukti nyata bahwa sistem web merupakan **translasi langsung dari mesin kalkulasi operasional yang telah dirancang dan dijalankan di lapangan** pada tingkat Implementing Partner (SR).
 
-Lembar kerja Excel makro ini adalah **murni 100% hasil keahlian dan rancangan mandiri saya** dari pengalaman bertahun-tahun mengelola data lapangan tanpa bantuan AI. Ketika kebutuhan monitoring berkembang untuk mengawal implementasi *Theory of Change* program, AI saya manfaatkan **murni sebagai alat bantu koding saat membangun sistem web (building web)** guna mempercepat penulisan kode Next.js/TypeScript dan mengunci 1.003 uji otomatis. Penguasaan domain monev, logika kaskade, dan arsitektur data lapangan sepenuhnya tetap berada di tangan saya.
+Lembar kerja analitik ini dirancang langsung dari pengalaman bertahun-tahun mengelola data lapangan. Ketika skala pemantauan berkembang untuk mengawal implementasi *Theory of Change* program, seluruh aturan bisnis, struktur kaskade indikator, dan skenario validasi dirumuskan dari keahlian domain Monev. AI dimanfaatkan secara terarah sebagai akselerator teknis untuk mempercepat penulisan sintaksis kode Next.js, pengetikan TypeScript, dan penyusunan 1.003 uji otomatis. Penguasaan tata kelola data lapangan dan integritas kalkulasi sepenuhnya berada di bawah kendali pengembang.
 
 Alur kalkulasi di lembar kerja Excel berjalan bertahap:
 
@@ -150,7 +150,7 @@ Struktur teknis ini didokumentasikan ke dalam tiga berkas portofolio resmi:
 
 ## 5. Kesimpulan dan Batasan Privasi
 
-Studi kasus ini menegaskan bahwa keahlian inti yang dimiliki adalah **pemahaman mendalam terhadap Theory of Change program, penguasaan juknis monev, dan kemampuan membedah struktur data lapangan kompleks**, sebagaimana terbukti pada lembar kerja Excel makro yang 100% dirancang mandiri. Pemanfaatan AI hadir murni sebagai akselerator koding saat membangun sistem web, sementara kendali atas validitas logika, desain arsitektur, dan integritas data tetap dipegang penuh oleh keahlian manusia.
+Studi kasus ini menegaskan bahwa nilai utama rekayasa sistem ini berakar dari penguasaan domain Monev: **pemahaman rantai intervensi Theory of Change, kepatuhan terhadap Petunjuk Teknis PR Spiritia, dan kemampuan membedah struktur data lapangan yang kompleks**. Pemanfaatan AI berperan sebagai akselerator penulisan kode pada tahap pengembangan web, sedangkan arsitektur data, logika agregasi, dan validitas perhitungan tetap dikendalikan penuh oleh keahlian profesional manusia.
 
 ### Batasan Privasi dan Kepatuhan Etika Data:
 - Berkas biner `.xlsb` asli disimpan di media penyimpanan privat yang terisolasi dan tidak diunggah ke repositori publik.
